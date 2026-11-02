@@ -58,7 +58,7 @@ button {
 }
 
 .section {
-  padding: 90px 0;
+  padding: 88px 0;
 }
 
 .section-muted {
@@ -237,15 +237,15 @@ p {
   justify-content: center;
   align-items: center;
   gap: 9px;
-  min-height: 49px;
+  min-height: 50px;
   padding: 12px 21px;
   border: 1px solid transparent;
-  border-radius: 7px;
+  border-radius: 9px;
   font-size: 12px;
   font-weight: 800;
   text-align: center;
   cursor: pointer;
-  transition: 0.25s ease;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
 
 .btn:hover {
@@ -288,16 +288,10 @@ p {
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 650px;
-  padding: 100px 0;
+  min-height: 620px;
+  padding: 88px 0;
   color: var(--white);
   background-color: var(--navy-dark);
-  background-image:
-    linear-gradient(90deg,
-      rgba(5, 19, 33, 0.96),
-      rgba(8, 29, 49, 0.82) 60%,
-      rgba(8, 29, 49, 0.45)),
-    url("images/workshop.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -424,6 +418,10 @@ p {
   gap: 65px;
 }
 
+.about-content {
+  min-width: 0;
+}
+
 .image-frame {
   position: relative;
   overflow: hidden;
@@ -528,7 +526,7 @@ p {
   color: var(--white);
   background:
     linear-gradient(110deg, rgba(7, 23, 37, 0.98), rgba(16, 43, 70, 0.91)),
-    url("images/workshop.jpg") center / cover;
+    url("images/galeri-01.jpg") center / cover;
 }
 
 .page-hero h1 {
@@ -596,6 +594,22 @@ p {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   transition: transform 0.4s ease;
+}
+
+.photo-card-illustration {
+  display: grid;
+  aspect-ratio: 4 / 3;
+  place-items: center;
+  color: #f3c875;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(35, 91, 132, .65), transparent 58%),
+    linear-gradient(135deg, #102b46, #081726);
+}
+
+.photo-card-illustration svg {
+  width: min(52%, 160px);
+  height: auto;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, .2));
 }
 
 .photo-card:hover img {
@@ -849,12 +863,7 @@ p {
     width: calc(100% - 34px);
   }
 
-  .section {
-    padding: 65px 0;
-  }
-
   .header-inner {
-    min-height: 72px;
     gap: 10px;
   }
 
@@ -913,31 +922,42 @@ p {
   }
 
   .hero {
-    min-height: 590px;
-    padding: 75px 0;
-    background-position: 60% center;
+    min-height: 0;
+    padding: 48px 0;
+    background-position: center, 62% center;
+  }
+
+  .hero .eyebrow {
+    margin-bottom: 12px;
+    font-size: 9px;
+    letter-spacing: 1.6px;
   }
 
   .hero h1 {
-    font-size: clamp(36px, 9vw, 51px);
+    font-size: clamp(32px, 8.5vw, 45px);
     letter-spacing: -1.4px;
   }
 
   .hero p {
+    margin-top: 16px;
     font-size: 13px;
+    line-height: 1.7;
   }
 
   .hero-actions {
-    align-items: stretch;
-  }
-
-  .hero-actions .btn {
-    flex: 1 1 180px;
+    align-items: flex-start;
+    gap: 9px;
+    margin-top: 20px;
   }
 
   .hero-points {
-    gap: 10px 17px;
-    font-size: 10px;
+    gap: 6px;
+    margin-top: 20px;
+    font-size: 9px;
+  }
+
+  .hero-points span {
+    padding: 5px 8px;
   }
 
   .stats-grid {
@@ -1031,24 +1051,8 @@ p {
 /* RESPONSIVE SMALL PHONE */
 
 @media (max-width: 420px) {
-  .container {
-    width: calc(100% - 28px);
-  }
-
-  .hero {
-    min-height: 550px;
-  }
-
   .hero h1 {
-    font-size: 35px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
+    font-size: clamp(30px, 8.5vw, 36px);
   }
 
   .card-grid,
@@ -1063,10 +1067,6 @@ p {
 
   .cta-inner .hero-actions {
     flex-direction: column;
-  }
-
-  .cta-inner .hero-actions .btn {
-    width: 100%;
   }
 
   .whatsapp-float {
@@ -1091,10 +1091,6 @@ p {
 
 /* SHARED VISUAL REFRESH */
 
-.section {
-  padding-block: 100px;
-}
-
 .section-muted {
   border-block: 1px solid #e8edf1;
 }
@@ -1105,32 +1101,12 @@ p {
   box-shadow: 0 8px 30px rgba(16, 43, 70, .06);
 }
 
-.header-inner {
-  min-height: 86px;
-}
-
 .brand {
   transition: transform .2s ease;
 }
 
 .brand:hover {
   transform: translateY(-1px);
-}
-
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
-  border: 1px solid rgba(239, 178, 75, .55);
-  border-radius: 14px 5px;
-  color: var(--gold);
-  background: linear-gradient(145deg, var(--navy-light), var(--navy-dark));
-  box-shadow: 0 6px 16px rgba(8, 23, 38, .17);
-  font-size: 15px;
-  font-weight: 900;
-  letter-spacing: -.5px;
 }
 
 .brand strong {
@@ -1168,18 +1144,11 @@ p {
   color: var(--navy-dark);
 }
 
-.btn {
-  min-height: 50px;
-  border-radius: 9px;
-  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-}
-
 .btn-primary {
   box-shadow: 0 8px 20px rgba(239, 178, 75, .2);
 }
 
 .hero {
-  min-height: 660px;
   background-image:
     linear-gradient(90deg, rgba(5, 19, 33, .97) 0%, rgba(8, 29, 49, .89) 48%, rgba(8, 29, 49, .48) 100%),
     url("");
@@ -1217,7 +1186,6 @@ p {
 
 .hero p {
   color: #d6e0e9;
-  font-size: 16px;
 }
 
 .hero-points {
@@ -1290,7 +1258,7 @@ p {
   padding-block: 104px;
   background:
     linear-gradient(100deg, rgba(5, 19, 33, .97), rgba(16, 43, 70, .88)),
-    url("images/WhatsApp Image 2026-11-02 at 13.14.15.jpeg") center 48% / cover;
+    url("images/galeri-01.jpg") center 48% / cover;
 }
 
 .page-hero .container {
@@ -1405,17 +1373,7 @@ p {
 
 @media (max-width: 760px) {
   .section {
-    padding-block: 72px;
-  }
-
-  .header-inner {
-    min-height: 72px;
-  }
-
-  .brand-mark {
-    width: 42px;
-    height: 42px;
-    flex-basis: 42px;
+    padding-block: 56px;
   }
 
   .nav-menu {
@@ -1430,23 +1388,6 @@ p {
   .nav-menu a:hover,
   .nav-menu a.active {
     background: #f3f6f8;
-  }
-
-  .hero {
-    min-height: 590px;
-    background-position: center, 62% center;
-  }
-
-  .hero h1 {
-    letter-spacing: -1.4px;
-  }
-
-  .hero-points {
-    gap: 8px;
-  }
-
-  .hero-points span {
-    padding: 6px 9px;
   }
 
   .stats-grid > div {
@@ -1471,30 +1412,9 @@ p {
 }
 
 @media (max-width: 420px) {
-  .hero {
-    min-height: 550px;
-  }
-
   .hero h1 {
     letter-spacing: -1px;
   }
-}
-
-/* ===== BRAND MARK ===== */
-.brand-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  border: 2px solid var(--gold);
-  border-radius: 9px;
-  color: var(--gold-light);
-  background: var(--navy);
-  font-size: 18px;
-  font-weight: 900;
-  letter-spacing: -1px;
 }
 
 /* ===== IMAGE CAPTION ===== */
@@ -1636,12 +1556,6 @@ p {
 }
 
 @media (max-width: 760px) {
-  .brand-mark {
-    width: 42px;
-    height: 42px;
-    font-size: 16px;
-  }
-
   .image-caption {
     right: 10px;
     bottom: 10px;
@@ -2069,7 +1983,7 @@ p {
 
 @media (max-width: 760px) {
   .gallery-hero {
-    padding: 75px 0;
+    padding: 48px 0;
   }
 
   .gallery-hero-inner {
@@ -2081,7 +1995,7 @@ p {
   }
 
   .gallery-hero h1 {
-    font-size: clamp(36px, 8vw, 48px);
+    font-size: clamp(31px, 8.5vw, 44px);
     letter-spacing: -1px;
   }
 
@@ -2150,12 +2064,7 @@ p {
 
 @media (max-width: 480px) {
   .gallery-hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .gallery-hero-actions .btn {
-    width: 100%;
+    align-items: flex-start;
   }
 
   .gallery-section-heading {
@@ -2194,7 +2103,6 @@ p {
 ========================================== */
 
 /* Mencegah ukuran elemen dan teks saling bertabrakan */
-.service-page-hero,
 .contact-hero,
 .contact-main-section,
 .contact-location-section,
@@ -2203,7 +2111,6 @@ p {
   isolation: isolate;
 }
 
-.service-page-hero *,
 .contact-hero *,
 .contact-main-section *,
 .contact-location-section *,
@@ -2235,92 +2142,7 @@ p {
   overflow-wrap: anywhere;
 }
 
-/* ---------- HEADER LOGO HT ---------- */
-
-.brand-mark {
-  display: inline-flex;
-  flex: 0 0 42px;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border: 2px solid #DCA34A;
-  border-radius: 9px;
-  color: #F3C875;
-  background: #102B46;
-  font-size: 15px;
-  font-weight: 900;
-  line-height: 1;
-}
-
 /* ---------- HALAMAN LAYANAN ---------- */
-
-.service-page-hero {
-  padding: 85px 0;
-  color: #fff;
-  background:
-    linear-gradient(110deg, #091B2C, #102B46);
-}
-
-.service-page-hero .container {
-  width: min(1160px, calc(100% - 48px));
-  margin-inline: auto;
-}
-
-.service-page-hero h1 {
-  max-width: 760px;
-  margin: 12px 0 18px;
-  color: #fff;
-  font-size: clamp(34px, 5vw, 58px);
-  font-weight: 900;
-  line-height: 1.15;
-  letter-spacing: -1px;
-}
-
-.service-page-hero h1 span {
-  color: #F3C875;
-}
-
-.service-page-hero p {
-  max-width: 680px;
-  color: #D5DFE8;
-  font-size: 15px;
-  line-height: 1.9;
-}
-
-.service-page-hero-visual {
-  min-width: 0;
-  overflow: hidden;
-  border: 1px solid rgba(243, 200, 117, .25);
-  border-radius: 14px;
-  background: #102B46;
-}
-
-.service-page-hero-visual img {
-  display: block;
-  width: 100%;
-  max-height: 440px;
-  aspect-ratio: 5 / 4;
-  object-fit: cover;
-}
-
-.service-page-image-fallback {
-  display: flex;
-  min-height: 240px;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  color: #F3C875;
-  text-align: center;
-}
-
-.service-page-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  margin-top: 26px;
-}
 
 .service-page-grid {
   display: grid;
@@ -2389,6 +2211,18 @@ p {
   padding: 82px 0;
   color: #fff;
   background: linear-gradient(115deg, #091B2C, #102B46 75%, #1C4264);
+}
+
+.contact-hero-decoration {
+  position: absolute;
+  right: 4%;
+  bottom: -62px;
+  z-index: 0;
+  color: rgba(255, 255, 255, .035);
+  font-size: clamp(120px, 20vw, 240px);
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .contact-hero-inner {
@@ -2871,21 +2705,14 @@ p {
 }
 
 @media (max-width: 760px) {
-  .brand-mark {
-    flex-basis: 38px;
-    width: 38px;
-    height: 38px;
-    font-size: 13px;
-  }
-
   .contact-hero,
   .service-page-hero {
-    padding: 60px 0;
+    padding: 38px 0;
   }
 
   .contact-hero-inner {
     grid-template-columns: minmax(0, 1fr);
-    gap: 32px;
+    gap: 24px;
   }
 
   .contact-hero h1 {
@@ -2923,11 +2750,11 @@ p {
   }
 
   .contact-cta-actions {
-    width: 100%;
+    width: auto;
   }
 
   .contact-cta-actions .btn {
-    width: 100%;
+    width: auto;
   }
 
   .service-page-grid,
@@ -2936,12 +2763,11 @@ p {
   }
 
   .service-page-hero-actions {
-    align-items: stretch;
-    flex-direction: column;
+    align-items: flex-start;
   }
 
   .service-page-hero-actions .btn {
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -2953,13 +2779,13 @@ p {
   }
 
   .contact-hero-actions {
-    align-items: stretch;
-    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 15px;
   }
 
   .contact-hero-actions .btn {
-    width: 100%;
+    width: auto;
   }
 
   .contact-hours-row {
@@ -3591,7 +3417,7 @@ p {
 /* 9. RESPONSIVE HP */
 @media (max-width: 760px) {
   .service-page-hero {
-    padding: 55px 0 60px;
+    padding: 34px 0 38px;
   }
 
   .service-page-hero .container,
@@ -3605,21 +3431,36 @@ p {
   .service-page-hero-inner,
   .service-page-intro-inner {
     grid-template-columns: minmax(0, 1fr);
-    gap: 32px;
+    gap: 20px;
+  }
+
+  .service-page-eyebrow {
+    margin-bottom: 14px;
+    letter-spacing: 1.4px;
   }
 
   .service-page-hero h1 {
-    font-size: clamp(34px, 8vw, 47px);
+    font-size: clamp(32px, 8vw, 44px);
     letter-spacing: -.8px;
   }
 
   .service-page-hero-content > p {
+    margin-top: 14px;
     font-size: 13px;
+    line-height: 1.7;
   }
 
   .service-page-hero-actions {
     align-items: flex-start;
-    gap: 17px;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .service-page-hero-note {
+    gap: 9px;
+    margin-top: 18px;
+    font-size: 10px;
+    line-height: 1.6;
   }
 
   .service-page-hero-visual {
@@ -3628,8 +3469,8 @@ p {
 
   .service-page-visual-frame > img,
   .service-page-image-fallback {
-    height: 290px;
-    min-height: 290px;
+    height: clamp(180px, 55vw, 220px);
+    min-height: 180px;
   }
 
   .service-page-intro {
@@ -3695,11 +3536,11 @@ p {
   }
 
   .service-page-cta-actions {
-    width: 100%;
+    width: auto;
   }
 
   .service-page-cta-actions .btn {
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -3718,12 +3559,12 @@ p {
   }
 
   .service-page-hero-actions {
-    align-items: stretch;
-    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .service-page-hero-actions .btn {
-    width: 100%;
+    width: auto;
   }
 
   .service-page-grid {
@@ -3744,8 +3585,8 @@ p {
 
   .service-page-visual-frame > img,
   .service-page-image-fallback {
-    height: 240px;
-    min-height: 240px;
+    height: 190px;
+    min-height: 190px;
   }
 
   .service-page-visual-caption {
@@ -3875,11 +3716,11 @@ p {
   }
 
   .service-page-visual-frame > img {
-    height: 250px;
+    height: clamp(190px, 60vw, 235px);
   }
 
   .service-page-image-fallback {
-    min-height: 220px;
+    min-height: 190px;
     padding: 22px 16px;
   }
 
@@ -4108,12 +3949,8 @@ p {
   }
 
   .about-page-hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .about-page-hero-actions .btn {
-    width: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .about-page-secondary-link {
@@ -4758,11 +4595,12 @@ p {
   }
 
   .about-page-hero-content > p {
-    font-size: 14px;
+    margin-top: 12px;
+    font-size: 13px;
   }
 
   .about-page-hero-note {
-    margin-top: 24px;
+    margin-top: 18px;
   }
 
   .about-page-hero-visual {
@@ -4770,10 +4608,14 @@ p {
     max-width: 540px;
   }
 
+  .about-page-image-frame {
+    min-height: 0;
+  }
+
   .about-page-image-frame > img,
   .about-page-image-fallback {
-    height: 260px;
-    min-height: 260px;
+    height: 220px;
+    min-height: 220px;
   }
 
   .about-page-intro,
@@ -4816,21 +4658,21 @@ p {
   }
 
   .about-page-cta-actions {
-    width: 100%;
+    width: auto;
   }
 
   .about-page-cta-actions .btn {
-    width: 100%;
+    width: auto;
   }
 }
 
 @media (max-width: 420px) {
   .about-page-hero {
-    padding-top: 38px;
+    padding: 30px 0 28px;
   }
 
   .about-page-hero h1 {
-    font-size: 36px;
+    font-size: clamp(30px, 8.2vw, 35px);
     letter-spacing: -1px;
   }
 
@@ -4841,8 +4683,8 @@ p {
 
   .about-page-image-frame > img,
   .about-page-image-fallback {
-    height: 220px;
-    min-height: 220px;
+    height: 190px;
+    min-height: 190px;
   }
 
   .about-page-image-caption {
@@ -4906,13 +4748,31 @@ main > section > .container {
 
 @media (max-width: 760px) {
   .brand {
-    gap: 9px;
+    gap: 8px;
   }
 
   .brand img.brand-mark {
-    width: 44px;
-    height: 44px;
-    flex-basis: 44px;
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .brand strong {
+    font-size: 11px;
+  }
+
+  .brand small {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .header-inner {
+    min-height: 64px;
+  }
+
+  .nav-toggle {
+    width: 38px;
+    height: 38px;
   }
 
   main::before {
@@ -4927,9 +4787,9 @@ main > section > .container {
   }
 
   .brand img.brand-mark {
-    width: 40px;
-    height: 40px;
-    flex-basis: 40px;
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
   }
 
   .brand strong {
@@ -4939,5 +4799,10 @@ main > section > .container {
   .brand small {
     font-size: 7px;
     letter-spacing: 1px;
+  }
+
+  .nav-toggle {
+    width: 36px;
+    height: 36px;
   }
 }
