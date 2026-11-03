@@ -23,11 +23,12 @@
     </a>
 
     <button class="nav-toggle" type="button"
-      aria-label="Buka menu" aria-expanded="false">
+      aria-label="Buka menu navigasi" aria-expanded="false"
+      aria-controls="main-navigation">
       <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
 
-    <nav class="nav-menu" aria-label="Navigasi utama">
+    <nav class="nav-menu" id="main-navigation" aria-label="Navigasi utama">
       <a href="index.html">Beranda</a>
       <a class="active" href="tentang.html" aria-current="page">Tentang</a>
       <a href="layanan.html">Layanan</a>
@@ -78,35 +79,19 @@
       <div class="about-page-hero-visual">
         <div class="about-page-image-frame">
           <img
-            src=""
-            alt="Visual desain komponen teknik dan mold industri"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-
-          <div class="about-page-image-fallback">
-            <span>HT</span>
-            <strong>HUNGGUL TEKNIK</strong>
-            <small>WORKSHOP INDUSTRI</small>
-          </div>
-
-          <div class="about-page-image-caption">
-            <span class="about-page-caption-mark">HT</span>
-            <div>
-              <strong>Industrial Engineering</strong>
-              <small>Technical solutions for industry</small>
-            </div>
-          </div>
+            src="images/galeri-01.jpg"
+            alt="Visualisasi desain komponen mold industri"
+            fetchpriority="high">
         </div>
 
         <div class="about-page-image-index">
           <span>01</span>
           <span></span>
-          <small>OUR WORKSHOP PROFILE</small>
+          <small>ENGINEERING PROFILE</small>
         </div>
       </div>
 
     </div>
-
-    <div class="about-page-watermark" aria-hidden="true">HT</div>
   </section>
 
   <!-- IDENTITAS PERUSAHAAN -->
@@ -114,7 +99,7 @@
     <div class="container about-page-intro-grid">
 
       <div class="about-page-intro-heading">
-        <span class="about-page-label">01 / SIAPA KAMI</span>
+        <span class="about-page-label">01 / PROFIL PERUSAHAAN</span>
         <h2>Mitra teknik untuk mendukung kebutuhan industri.</h2>
       </div>
 
@@ -123,6 +108,7 @@
           CV Hunggul Teknik Workshop berfokus pada pengerjaan
           perbaikan dan pembuatan komponen teknik, terutama untuk
           mesin injection molding dan kebutuhan pisau industri.
+          Workshop berlokasi di Pondok Jaya, Sepatan, Tangerang.
         </p>
 
         <p>

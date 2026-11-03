@@ -22,11 +22,12 @@
     </a>
 
     <button class="nav-toggle" type="button"
-      aria-label="Buka menu" aria-expanded="false">
+      aria-label="Buka menu navigasi" aria-expanded="false"
+      aria-controls="main-navigation">
       <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
 
-    <nav class="nav-menu" aria-label="Navigasi utama">
+    <nav class="nav-menu" id="main-navigation" aria-label="Navigasi utama">
       <a href="index.html">Beranda</a>
       <a href="tentang.html">Tentang</a>
       <a class="active" href="layanan.html" aria-current="page">Layanan</a>
@@ -77,33 +78,18 @@
       <div class="service-page-hero-visual">
         <div class="service-page-visual-frame">
           <img
-            src=""
-            alt="Visual desain komponen mold untuk kebutuhan teknik industri"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-
-          <div class="service-page-image-fallback">
-            <span>HT</span>
-            <strong>ENGINEERING WORKSHOP</strong>
-            <small>INDUSTRIAL COMPONENTS & REPAIR</small>
-          </div>
-
-          <div class="service-page-visual-caption">
-            <span class="service-page-caption-mark">HT</span>
-            <div>
-              <strong>Industrial Engineering</strong>
-              <small>Technical solutions for industry</small>
-            </div>
-          </div>
+            src="images/galeri-01.jpg"
+            alt="Visualisasi desain komponen mold untuk kebutuhan teknik industri"
+            fetchpriority="high">
         </div>
 
         <div class="service-page-visual-index">
           <span>01</span>
           <span class="service-page-index-line"></span>
-          <span>TECHNICAL SERVICES</span>
+          <span>INDUSTRIAL SERVICES</span>
         </div>
       </div>
     </div>
-    <div class="service-page-hero-watermark" aria-hidden="true">HT</div>
   </section>
 
   <!-- INTRODUCTION -->
@@ -153,10 +139,34 @@
               <path d="M12 15h10v18H12zM26 15h10M26 21h10M26 27h10M26 33h10M5 23h7M36 23h7" stroke="currentColor" stroke-width="2"/>
             </svg>
           </div>
-          <h3>Part Mesin Injection</h3>
+          <h3>Injection Molding Maker &amp; Repair</h3>
           <p>
-            Pengerjaan atau perbaikan komponen mesin injection molding
-            berdasarkan kondisi komponen dan kebutuhan teknis.
+            Pembuatan, perbaikan, dan pengerjaan mold injection
+            berdasarkan kondisi komponen serta kebutuhan teknis.
+          </p>
+          <a class="service-page-card-link"
+            href="https://wa.me/628170802988?text=Halo%20Pak%20Pur%2C%20saya%20ingin%20konsultasi%20injection%20molding%20maker%20dan%20repair."
+            target="_blank" rel="noopener noreferrer">
+            Konsultasikan layanan <span>↗</span>
+          </a>
+        </article>
+
+        <article class="service-page-card">
+          <div class="service-page-card-top">
+            <span class="service-page-card-number">02</span>
+            <span class="service-page-card-tag">INJECTION PARTS</span>
+          </div>
+          <div class="service-page-icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="24" r="7" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 4v8M24 36v8M4 24h8M36 24h8M10 10l6 6M32 32l6 6M38 10l-6 6M16 32l-6 6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Injection Machine Parts</h3>
+          <p>
+            Pengerjaan dan perbaikan part mesin injection molding
+            sesuai kondisi komponen dan kebutuhan teknis.
           </p>
           <a class="service-page-card-link"
             href="https://wa.me/628170802988?text=Halo%20Pak%20Pur%2C%20saya%20ingin%20konsultasi%20part%20mesin%20injection."
@@ -167,7 +177,7 @@
 
         <article class="service-page-card">
           <div class="service-page-card-top">
-            <span class="service-page-card-number">02</span>
+            <span class="service-page-card-number">03</span>
             <span class="service-page-card-tag">OVERHAUL</span>
           </div>
           <div class="service-page-icon">
@@ -177,13 +187,13 @@
               <path d="M24 4v8M24 36v8M4 24h8M36 24h8M10 10l6 6M32 32l6 6M38 10l-6 6M16 32l-6 6" stroke="currentColor" stroke-width="2"/>
             </svg>
           </div>
-          <h3>Overhaul</h3>
+          <h3>Overhaul Mesin Injection</h3>
           <p>
-            Pengerjaan perbaikan dan pemeriksaan komponen sesuai
-            kondisi peralatan serta lingkup pekerjaan yang disepakati.
+            Pemeriksaan dan perbaikan komponen sesuai kondisi mesin
+            serta ruang lingkup pekerjaan yang disepakati.
           </p>
           <a class="service-page-card-link"
-            href="https://wa.me/628170802988?text=Halo%20Pak%20Pur%2C%20saya%20ingin%20konsultasi%20overhaul."
+            href="https://wa.me/628170802988?text=Halo%20Pak%20Pur%2C%20saya%20ingin%20konsultasi%20overhaul%20mesin%20injection."
             target="_blank" rel="noopener noreferrer">
             Konsultasikan layanan <span>↗</span>
           </a>
@@ -191,7 +201,7 @@
 
         <article class="service-page-card">
           <div class="service-page-card-top">
-            <span class="service-page-card-number">03</span>
+            <span class="service-page-card-number">04</span>
             <span class="service-page-card-tag">TOGGLE</span>
           </div>
           <div class="service-page-icon">
@@ -217,7 +227,7 @@
 
         <article class="service-page-card">
           <div class="service-page-card-top">
-            <span class="service-page-card-number">04</span>
+            <span class="service-page-card-number">05</span>
             <span class="service-page-card-tag">SCREW</span>
           </div>
           <div class="service-page-icon">
@@ -240,7 +250,7 @@
 
         <article class="service-page-card">
           <div class="service-page-card-top">
-            <span class="service-page-card-number">05</span>
+            <span class="service-page-card-number">06</span>
             <span class="service-page-card-tag">FABRICATION</span>
           </div>
           <div class="service-page-icon">
@@ -249,7 +259,7 @@
               <path d="M7 29h13v11M29 20h12M29 29h12" stroke="currentColor" stroke-width="2"/>
             </svg>
           </div>
-          <h3>Fabrikasi & Pembuatan Part</h3>
+          <h3>Fabrikasi Industri</h3>
           <p>
             Pembuatan komponen teknik berdasarkan kebutuhan,
             ukuran, gambar, dan spesifikasi yang disepakati.
@@ -263,7 +273,7 @@
 
         <article class="service-page-card">
           <div class="service-page-card-top">
-            <span class="service-page-card-number">06</span>
+            <span class="service-page-card-number">07</span>
             <span class="service-page-card-tag">CRUSHER</span>
           </div>
           <div class="service-page-icon">
@@ -273,7 +283,7 @@
               <path d="m9 35 4 4" stroke="currentColor" stroke-width="2"/>
             </svg>
           </div>
-          <h3>Pisau Crusher</h3>
+          <h3>Pembuatan &amp; Pengasahan Pisau Crusher</h3>
           <p>
             Pembuatan dan pengasahan pisau crusher untuk kebutuhan
             pengolahan material sesuai spesifikasi penggunaan.
@@ -287,7 +297,7 @@
 
         <article class="service-page-card">
           <div class="service-page-card-top">
-            <span class="service-page-card-number">07</span>
+            <span class="service-page-card-number">08</span>
             <span class="service-page-card-tag">SHEARING</span>
           </div>
           <div class="service-page-icon">
@@ -311,7 +321,7 @@
 
         <article class="service-page-card">
           <div class="service-page-card-top">
-            <span class="service-page-card-number">08</span>
+            <span class="service-page-card-number">09</span>
             <span class="service-page-card-tag">BEADING</span>
           </div>
           <div class="service-page-icon">
@@ -321,7 +331,7 @@
               <path d="M18 12v24M30 12v24" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
             </svg>
           </div>
-          <h3>Pisau Beading</h3>
+          <h3>Beading</h3>
           <p>
             Pengerjaan pisau beading berdasarkan kebutuhan,
             dimensi, dan informasi teknis dari pelanggan.
